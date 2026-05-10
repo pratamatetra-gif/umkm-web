@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UMKM Nusantara</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#333;
+    }
+
+    header{
+      background:#2d6a4f;
+      color:white;
+      padding:20px;
+      position:sticky;
+      top:0;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin-left:20px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .hero{
+      height:90vh;
+      background:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop') center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+    }
+
+    .hero-content{
+      background:rgba(0,0,0,0.6);
+      padding:40px;
+      border-radius:15px;
+      animation:fadeIn 2s;
+    }
+
+    .hero h1{
+      font-size:50px;
+      margin-bottom:15px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:15px 25px;
+      background:#2d6a4f;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#1b4332;
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:70px 20px;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:30px;
+      color:#2d6a4f;
+    }
+
+    .about{
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+      line-height:1.8;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact a{
+      display:inline-block;
+      margin:10px;
+      padding:12px 25px;
+      background:#2d6a4f;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+    }
+
+    footer{
+      background:#1b4332;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+      }
+
+      to{
+        opacity:1;
+      }
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:10px;
+      }
+
+      .hero h1{
+        font-size:35px;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+
+<header>
+
+  <nav>
+
+    <h2>UMKM Nusantara</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+
+  </nav>
+
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>Produk Lokal Berkualitas</h1>
+
+    <p>Dukung UMKM Indonesia Go Digital</p>
+
+    <a href="katalog.html" class="btn">
+      Lihat Katalog Produk
+    </a>
+
+  </div>
+
+</section>
+
+<!-- TENTANG -->
+<section id="tentang">
+
+  <h2 class="title">
+    Tentang Brand Kami
+  </h2>
+
+  <div class="about">
+
+    <p>
+      UMKM Nusantara adalah platform pemasaran produk lokal Indonesia.
+      Kami membantu pelaku UMKM memasarkan produk mereka secara digital
+      agar lebih dikenal masyarakat luas.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- KONTAK -->
+<section id="kontak">
+
+  <h2 class="title">
+    Kontak Person
+  </h2>
+
+  <div class="contact">
+
+    <a href="https://wa.me/6281234567890" target="_blank">
+      WhatsApp
+    </a>
+
+    <a href="https://instagram.com/usernameanda" target="_blank">
+      Instagram
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>© 2026 UMKM Nusantara</p>
+
+</footer>
+
+</body>
+</html>
