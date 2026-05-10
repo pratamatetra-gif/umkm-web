@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>UMKM Nusantara</title>
+  <title>UMKM Nusantara | Produk Lokal Indonesia</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
@@ -12,20 +18,25 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial, sans-serif;
+      font-family:'Poppins', sans-serif;
     }
 
     body{
       background:#f5f5f5;
-      color:#333;
+      overflow-x:hidden;
     }
 
+    /* HEADER */
+
     header{
-      background:#2d6a4f;
-      color:white;
-      padding:20px;
-      position:sticky;
+      width:100%;
+      position:fixed;
       top:0;
+      left:0;
+      z-index:1000;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(10px);
+      padding:20px 8%;
     }
 
     nav{
@@ -34,106 +45,197 @@
       align-items:center;
     }
 
+    .logo{
+      color:white;
+      font-size:28px;
+      font-weight:700;
+    }
+
     nav ul{
       display:flex;
       list-style:none;
     }
 
     nav ul li{
-      margin-left:20px;
+      margin-left:30px;
     }
 
     nav ul li a{
-      color:white;
       text-decoration:none;
-      font-weight:bold;
+      color:white;
+      font-weight:500;
+      transition:0.3s;
     }
 
+    nav ul li a:hover{
+      color:#95d5b2;
+    }
+
+    /* HERO */
+
     .hero{
-      height:90vh;
-      background:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop') center/cover;
+      width:100%;
+      height:100vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('gerbang.png');
+
+      background-position:center;
+      background-size:cover;
+
       display:flex;
-      justify-content:center;
       align-items:center;
+      justify-content:center;
+
       text-align:center;
       color:white;
+      padding:20px;
     }
 
     .hero-content{
-      background:rgba(0,0,0,0.6);
-      padding:40px;
-      border-radius:15px;
-      animation:fadeIn 2s;
+      animation:fadeUp 1.5s;
     }
 
-    .hero h1{
-      font-size:50px;
-      margin-bottom:15px;
+    .hero-content h1{
+      font-size:65px;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      margin-bottom:30px;
+      color:#f1f1f1;
     }
 
     .btn{
       display:inline-block;
-      margin-top:20px;
-      padding:15px 25px;
+      padding:15px 35px;
       background:#2d6a4f;
       color:white;
       text-decoration:none;
-      border-radius:10px;
+      border-radius:50px;
+      font-size:18px;
+      font-weight:600;
       transition:0.3s;
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
     }
 
     .btn:hover{
       background:#1b4332;
-      transform:scale(1.05);
+      transform:translateY(-5px);
     }
 
-    section{
-      padding:70px 20px;
+    /* FEATURES */
+
+    .features{
+      padding:100px 8%;
+      background:white;
     }
 
-    .title{
+    .section-title{
       text-align:center;
-      margin-bottom:30px;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:40px;
+      color:#2d6a4f;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:gray;
+    }
+
+    .feature-box{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#f8f9fa;
+      padding:40px 30px;
+      border-radius:20px;
+      text-align:center;
+      transition:0.3s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      margin:20px 0 10px;
       color:#2d6a4f;
     }
 
-    .about{
-      max-width:900px;
-      margin:auto;
-      text-align:center;
-      line-height:1.8;
+    .card p{
+      color:#555;
+      line-height:1.7;
     }
 
-    .contact{
-      text-align:center;
+    .icon{
+      font-size:50px;
     }
 
-    .contact a{
-      display:inline-block;
-      margin:10px;
-      padding:12px 25px;
+    /* CTA */
+
+    .cta{
+      padding:100px 8%;
       background:#2d6a4f;
+      text-align:center;
       color:white;
-      text-decoration:none;
-      border-radius:10px;
     }
+
+    .cta h2{
+      font-size:45px;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      margin-bottom:30px;
+      font-size:18px;
+    }
+
+    .cta .btn{
+      background:white;
+      color:#2d6a4f;
+    }
+
+    .cta .btn:hover{
+      background:#d8f3dc;
+    }
+
+    /* FOOTER */
 
     footer{
       background:#1b4332;
       color:white;
       text-align:center;
-      padding:20px;
+      padding:25px;
     }
 
-    @keyframes fadeIn{
+    /* ANIMATION */
+
+    @keyframes fadeUp{
+
       from{
         opacity:0;
+        transform:translateY(40px);
       }
 
       to{
         opacity:1;
+        transform:translateY(0);
       }
+
     }
+
+    /* RESPONSIVE */
 
     @media(max-width:768px){
 
@@ -142,12 +244,25 @@
       }
 
       nav ul{
-        margin-top:10px;
+        margin-top:15px;
       }
 
-      .hero h1{
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      .hero-content p{
+        font-size:16px;
+      }
+
+      .section-title h2{
+        font-size:32px;
+      }
+
+      .cta h2{
         font-size:35px;
       }
+
     }
 
   </style>
@@ -155,83 +270,143 @@
 </head>
 <body>
 
+<!-- HEADER -->
+
 <header>
 
   <nav>
 
-    <h2>UMKM Nusantara</h2>
+    <div class="logo">
+      UMKM Nusantara
+    </div>
 
     <ul>
-      <li><a href="#home">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="katalog.html">Katalog</a></li>
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#kontak">Kontak</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
     </ul>
 
   </nav>
 
 </header>
 
-<!-- HOME -->
-<section class="hero" id="home">
+<!-- HERO -->
+
+<section class="hero">
 
   <div class="hero-content">
 
-    <h1>Produk Lokal Berkualitas</h1>
+    <h1>
+      Produk Lokal <br>
+      Berkualitas Indonesia
+    </h1>
 
-    <p>Dukung UMKM Indonesia Go Digital</p>
+    <p>
+      Dukung UMKM Indonesia agar berkembang di era digital
+    </p>
 
     <a href="katalog.html" class="btn">
-      Lihat Katalog Produk
+      Lihat Katalog
     </a>
 
   </div>
 
 </section>
 
-<!-- TENTANG -->
-<section id="tentang">
+<!-- FEATURES -->
 
-  <h2 class="title">
-    Tentang Brand Kami
-  </h2>
+<section class="features">
 
-  <div class="about">
+  <div class="section-title">
+
+    <h2>Kenapa Memilih Kami?</h2>
 
     <p>
-      UMKM Nusantara adalah platform pemasaran produk lokal Indonesia.
-      Kami membantu pelaku UMKM memasarkan produk mereka secara digital
-      agar lebih dikenal masyarakat luas.
+      Produk lokal berkualitas dengan pelayanan terbaik
     </p>
 
   </div>
 
-</section>
+  <div class="feature-box">
 
-<!-- KONTAK -->
-<section id="kontak">
+    <!-- CARD 1 -->
 
-  <h2 class="title">
-    Kontak Person
-  </h2>
+    <div class="card">
 
-  <div class="contact">
+      <div class="icon">
+        🛍️
+      </div>
 
-    <a href="https://wa.me/6281234567890" target="_blank">
-      WhatsApp
-    </a>
+      <h3>Produk Berkualitas</h3>
 
-    <a href="https://instagram.com/usernameanda" target="_blank">
-      Instagram
-    </a>
+      <p>
+        Kami menyediakan produk UMKM pilihan dengan kualitas terbaik.
+      </p>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="card">
+
+      <div class="icon">
+        🚚
+      </div>
+
+      <h3>Pengiriman Cepat</h3>
+
+      <p>
+        Produk dikirim dengan aman dan cepat ke seluruh Indonesia.
+      </p>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="card">
+
+      <div class="icon">
+        💬
+      </div>
+
+      <h3>Respon Cepat</h3>
+
+      <p>
+        Pelayanan ramah dan fast respon melalui WhatsApp.
+      </p>
+
+    </div>
 
   </div>
 
 </section>
 
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2>
+    Mari Dukung Produk Lokal
+  </h2>
+
+  <p>
+    Belanja produk UMKM Indonesia sekarang juga
+  </p>
+
+  <a href="katalog.html" class="btn">
+    Belanja Sekarang
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer>
 
-  <p>© 2026 UMKM Nusantara</p>
+  <p>
+    © 2026 UMKM Nusantara | Produk Lokal Indonesia
+  </p>
 
 </footer>
 
