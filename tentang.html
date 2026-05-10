@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>UMKM Nusantara | Produk Lokal Indonesia</title>
+  <title>Tentang Kami | UMKM Nusantara</title>
 
   <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,19 +24,18 @@
     body{
       background:#f5f5f5;
       overflow-x:hidden;
+      color:#333;
     }
 
     /* HEADER */
 
     header{
       width:100%;
-      position:fixed;
-      top:0;
-      left:0;
-      z-index:1000;
-      background:rgba(0,0,0,0.5);
-      backdrop-filter:blur(10px);
+      background:#1b4332;
       padding:20px 8%;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
     nav{
@@ -77,56 +76,76 @@
 
     .hero{
       width:100%;
-      height:100vh;
+      height:50vh;
 
       background:
       linear-gradient(
         rgba(0,0,0,0.6),
         rgba(0,0,0,0.6)
       ),
-      url('gerbang.png');
+      url('tentang.jpg');
 
-      background-position:center;
       background-size:cover;
-      background-repeat:no-repeat;
+      background-position:center;
 
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
 
       text-align:center;
       color:white;
       padding:20px;
     }
 
-    .hero-content{
+    .hero h1{
+      font-size:55px;
       animation:fadeUp 1.5s;
-      max-width:800px;
     }
 
-    .hero-content h1{
-      font-size:65px;
+    /* ABOUT */
+
+    .about{
+      padding:100px 8%;
+      background:white;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .about-image img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .about-text h2{
+      font-size:40px;
+      color:#2d6a4f;
       margin-bottom:20px;
-      line-height:1.2;
     }
 
-    .hero-content p{
-      font-size:20px;
-      margin-bottom:30px;
-      color:#f1f1f1;
+    .about-text p{
+      line-height:1.9;
+      margin-bottom:20px;
+      color:#555;
     }
 
     .btn{
       display:inline-block;
-      padding:15px 35px;
+      padding:15px 30px;
       background:#2d6a4f;
       color:white;
       text-decoration:none;
       border-radius:50px;
-      font-size:18px;
-      font-weight:600;
       transition:0.3s;
-      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+      font-weight:600;
     }
 
     .btn:hover{
@@ -134,11 +153,11 @@
       transform:translateY(-5px);
     }
 
-    /* FEATURES */
+    /* VISI MISI */
 
-    .features{
+    .visi-misi{
       padding:100px 8%;
-      background:white;
+      background:#f8f9fa;
     }
 
     .section-title{
@@ -152,69 +171,33 @@
       margin-bottom:10px;
     }
 
-    .section-title p{
-      color:gray;
-    }
-
-    .feature-box{
+    .box-container{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:30px;
     }
 
-    .card{
-      background:#f8f9fa;
+    .box{
+      background:white;
       padding:40px 30px;
       border-radius:20px;
-      text-align:center;
-      transition:0.3s;
       box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:0.3s;
     }
 
-    .card:hover{
+    .box:hover{
       transform:translateY(-10px);
     }
 
-    .card h3{
-      margin:20px 0 10px;
+    .box h3{
       color:#2d6a4f;
+      margin-bottom:15px;
+      font-size:28px;
     }
 
-    .card p{
+    .box p{
+      line-height:1.8;
       color:#555;
-      line-height:1.7;
-    }
-
-    .icon{
-      font-size:50px;
-    }
-
-    /* CTA */
-
-    .cta{
-      padding:100px 8%;
-      background:#2d6a4f;
-      text-align:center;
-      color:white;
-    }
-
-    .cta h2{
-      font-size:45px;
-      margin-bottom:20px;
-    }
-
-    .cta p{
-      margin-bottom:30px;
-      font-size:18px;
-    }
-
-    .cta .btn{
-      background:white;
-      color:#2d6a4f;
-    }
-
-    .cta .btn:hover{
-      background:#d8f3dc;
     }
 
     /* FOOTER */
@@ -246,37 +229,28 @@
 
     @media(max-width:768px){
 
-      header{
-        padding:15px 5%;
-      }
-
       nav{
         flex-direction:column;
       }
 
       nav ul{
         margin-top:15px;
-        justify-content:center;
       }
 
       nav ul li{
         margin:10px;
       }
 
-      .hero-content h1{
-        font-size:42px;
+      .hero h1{
+        font-size:38px;
       }
 
-      .hero-content p{
-        font-size:16px;
+      .about-text h2{
+        font-size:32px;
       }
 
       .section-title h2{
         font-size:32px;
-      }
-
-      .cta h2{
-        font-size:35px;
       }
 
     }
@@ -311,109 +285,96 @@
 
 <section class="hero">
 
-  <div class="hero-content">
+  <h1>
+    Tentang Kami
+  </h1>
 
-    <h1>
-      Produk Lokal <br>
-      Berkualitas Indonesia
-    </h1>
+</section>
 
-    <p>
-      Temukan produk UMKM terbaik Indonesia dengan kualitas premium
-      dan pelayanan terpercaya.
-    </p>
+<!-- ABOUT -->
 
-    <a href="katalog.html" class="btn">
-      Lihat Katalog
-    </a>
+<section class="about">
+
+  <div class="container">
+
+    <!-- IMAGE -->
+
+    <div class="about-image">
+
+      <img src="brand.jpg">
+
+    </div>
+
+    <!-- TEXT -->
+
+    <div class="about-text">
+
+      <h2>
+        UMKM Nusantara
+      </h2>
+
+      <p>
+        UMKM Nusantara adalah platform digital yang membantu
+        pelaku usaha kecil dan menengah Indonesia untuk berkembang
+        di era digital melalui pemasaran online yang modern.
+      </p>
+
+      <p>
+        Kami percaya bahwa produk lokal Indonesia memiliki kualitas
+        tinggi dan mampu bersaing secara luas di pasar nasional maupun internasional.
+      </p>
+
+      <a href="katalog.html" class="btn">
+        Lihat Produk
+      </a>
+
+    </div>
 
   </div>
 
 </section>
 
-<!-- FEATURES -->
+<!-- VISI MISI -->
 
-<section class="features">
+<section class="visi-misi">
 
   <div class="section-title">
 
-    <h2>Kenapa Belanja di UMKM Nusantara?</h2>
-
-    <p>
-      Pengalaman belanja produk lokal yang modern dan terpercaya
-    </p>
+    <h2>
+      Visi & Misi
+    </h2>
 
   </div>
 
-  <div class="feature-box">
+  <div class="box-container">
 
-    <!-- CARD 1 -->
+    <!-- VISI -->
 
-    <div class="card">
+    <div class="box">
 
-      <div class="icon">
-        🛍️
-      </div>
-
-      <h3>Produk Berkualitas</h3>
+      <h3>Visi</h3>
 
       <p>
-        Kami menyediakan produk UMKM pilihan dengan kualitas terbaik.
+        Menjadi platform pemasaran UMKM Indonesia yang modern,
+        terpercaya, dan mampu membantu produk lokal dikenal lebih luas.
       </p>
 
     </div>
 
-    <!-- CARD 2 -->
+    <!-- MISI -->
 
-    <div class="card">
+    <div class="box">
 
-      <div class="icon">
-        🚚
-      </div>
-
-      <h3>Pengiriman Cepat</h3>
+      <h3>Misi</h3>
 
       <p>
-        Produk dikirim dengan aman dan cepat ke seluruh Indonesia.
-      </p>
-
-    </div>
-
-    <!-- CARD 3 -->
-
-    <div class="card">
-
-      <div class="icon">
-        💬
-      </div>
-
-      <h3>Fast Respon</h3>
-
-      <p>
-        Pelayanan ramah dan cepat melalui WhatsApp dan Instagram.
+        Membantu UMKM berkembang melalui teknologi digital,
+        pemasaran online, dan pelayanan yang profesional.
       </p>
 
     </div>
 
   </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-  <h2>
-    Mari Dukung Produk Lokal Indonesia
-  </h2>
-
-  <p>
-    Belanja produk UMKM terbaik sekarang juga
-  </p>
-
-  <a href="katalog.html" class="btn">
-    Belanja Sekarang
-  </a>
 
 </section>
 
@@ -422,7 +383,7 @@
 <footer>
 
   <p>
-    © 2026 UMKM Nusantara | Website Produk Lokal Indonesia
+    © 2026 UMKM Nusantara | Produk Lokal Indonesia
   </p>
 
 </footer>
