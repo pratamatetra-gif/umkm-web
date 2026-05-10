@@ -34,7 +34,7 @@
       top:0;
       left:0;
       z-index:1000;
-      background:rgba(0,0,0,0.4);
+      background:rgba(0,0,0,0.5);
       backdrop-filter:blur(10px);
       padding:20px 8%;
     }
@@ -43,6 +43,7 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
+      flex-wrap:wrap;
     }
 
     .logo{
@@ -54,10 +55,11 @@
     nav ul{
       display:flex;
       list-style:none;
+      flex-wrap:wrap;
     }
 
     nav ul li{
-      margin-left:30px;
+      margin-left:25px;
     }
 
     nav ul li a{
@@ -78,11 +80,15 @@
       height:100vh;
 
       background:
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+      ),
       url('gerbang.png');
 
       background-position:center;
       background-size:cover;
+      background-repeat:no-repeat;
 
       display:flex;
       align-items:center;
@@ -95,6 +101,7 @@
 
     .hero-content{
       animation:fadeUp 1.5s;
+      max-width:800px;
     }
 
     .hero-content h1{
@@ -239,12 +246,21 @@
 
     @media(max-width:768px){
 
+      header{
+        padding:15px 5%;
+      }
+
       nav{
         flex-direction:column;
       }
 
       nav ul{
         margin-top:15px;
+        justify-content:center;
+      }
+
+      nav ul li{
+        margin:10px;
       }
 
       .hero-content h1{
@@ -303,7 +319,8 @@
     </h1>
 
     <p>
-      Dukung UMKM Indonesia agar berkembang di era digital
+      Temukan produk UMKM terbaik Indonesia dengan kualitas premium
+      dan pelayanan terpercaya.
     </p>
 
     <a href="katalog.html" class="btn">
@@ -320,10 +337,10 @@
 
   <div class="section-title">
 
-    <h2>Kenapa Memilih Kami?</h2>
+    <h2>Kenapa Belanja di UMKM Nusantara?</h2>
 
     <p>
-      Produk lokal berkualitas dengan pelayanan terbaik
+      Pengalaman belanja produk lokal yang modern dan terpercaya
     </p>
 
   </div>
@@ -370,10 +387,10 @@
         💬
       </div>
 
-      <h3>Respon Cepat</h3>
+      <h3>Fast Respon</h3>
 
       <p>
-        Pelayanan ramah dan fast respon melalui WhatsApp.
+        Pelayanan ramah dan cepat melalui WhatsApp dan Instagram.
       </p>
 
     </div>
@@ -387,11 +404,11 @@
 <section class="cta">
 
   <h2>
-    Mari Dukung Produk Lokal
+    Mari Dukung Produk Lokal Indonesia
   </h2>
 
   <p>
-    Belanja produk UMKM Indonesia sekarang juga
+    Belanja produk UMKM terbaik sekarang juga
   </p>
 
   <a href="katalog.html" class="btn">
@@ -405,7 +422,7 @@
 <footer>
 
   <p>
-    © 2026 UMKM Nusantara | Produk Lokal Indonesia
+    © 2026 UMKM Nusantara | Website Produk Lokal Indonesia
   </p>
 
 </footer>
